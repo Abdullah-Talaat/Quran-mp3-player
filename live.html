@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Roboto&display=swap" rel="stylesheet">
 
   <title>HTML</title>
   
@@ -30,12 +34,21 @@
     </div>
     <div class="player">
       <div class="live">
-        سوف يأتي قريبا
+        <div class="chose nav">
+          <button class="btn tt" onclick="runLive('https://win.holol.com/live/quran/playlist.m3u8','القرآن)">قناة القرآن الكريم</button>
+          <button class="btn tt" onclick="runLive('https://win.holol.com/live/sunnah/playlist.m3u8','السنة')"> قناة السنه النبويه</button>
+        </div>
+        <div class="videoPlayer nav">
+          <video id="live" src="" height="" width="" preload="none" autoplay="autoplay" controls>
+            
+          </video>
+        </div>
       </div>
     </div>
   </div>
   <!-- Project -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.3/axios.min.js" integrity="sha512-zJXKBryKlsiDaWcWQ9fuvy50SG03/Qc5SqfLXxHmk9XiUUbcD9lXYjHDBxLFOuZSU6ULXaJ69bd7blSMEgxXNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="api.js"></script>
+  <script src="live.js"></script>
 </body>
 </html>

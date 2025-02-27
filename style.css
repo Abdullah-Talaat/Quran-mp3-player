@@ -1,7 +1,14 @@
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 .load-screan-Api{
   display: flex;
@@ -88,15 +95,32 @@ header{
   justify-content: space-around;
   list-style: none;
 }
-.nav a{
+.nav a,.btn{
   margin-left: 10px;
   padding: 5px 10px;
   background: #2977F6;
   border-radius: 10px;
   text-decoration: none;
   color: #fff;
+  border:none;
+  outline: none;
 }
-
+.tt{
+  font-size: 20px
+}
+.live{
+  height:80vh;
+  width:70vw;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-self: center;
+}
+.videoPlayer video{
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+}
 .nav li:hover{
   background:#111;
 }

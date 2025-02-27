@@ -6,6 +6,7 @@ function getAllReciters() {
   axios.get(`${api}/${qura}`)
   .then((response) => {
    lodingSrean(false);
+   
    allReciters = response.data.reciters;
    let qrN = "";
    qraueS.innerHTML = `<option value="">اختر قاراء</option>`;
@@ -15,6 +16,9 @@ function getAllReciters() {
      `;
    }
    qraueS.innerHTML = qrN;
+   
+  let id = localStorage.getItem("id") || "1"; // تأكد أن القيمة نصية
+  qraueS.value = id
   })
   .catch((error) => {
     lodingSrean(false);
@@ -22,6 +26,7 @@ function getAllReciters() {
   })
 }
 getAllReciters();
+
 // get all moshaf
 let rwuh = document.getElementById("rwuh");
  function getAllRoualh(id) {
@@ -59,10 +64,13 @@ let rwuh = document.getElementById("rwuh");
 }
 qraueS.onchange = function (){
   getAllRoualh(this.value);
+  localStorage.setItem("id",this.value)
   document.querySelector('.player-s').style.display = "none";
   document.querySelector('.player-s audio').src = '';
 }
-getAllRoualh(1);
+
+getAllRoualh(localStorage.getItem("id") || 1);
+
 // get all soruh
 let sorahE = document.getElementById("sorah");
 function getSurah(server,list) {
