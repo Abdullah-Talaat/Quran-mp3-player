@@ -28,6 +28,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
-
-alert("تم إضافة صفحه جديده وهي صفحة الراديو" )
