@@ -23,6 +23,11 @@ function getAllReciters() {
   .catch((error) => {
     lodingSrean(false);
     console.log(`error: ${error}`);
+    console.log(error)
+    if (error.message.includes("502")) {
+      alert("هناك خطأ 502,اي هناك خطأ في الموقع الأساسي")
+      location.href = "https://mp3quran.net/ar"
+    }
   })
 }
 getAllReciters();
